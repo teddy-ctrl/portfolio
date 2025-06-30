@@ -144,10 +144,10 @@ export const otherProjects = [
     liveLink: "https://amazon-project-nine-jade.vercel.app",
     caseStudy: {
       problem:
-        "Consumers needed a scalable, secure platform for seamless online shopping — similar to Amazon.",
+        "Users wanted a scalable, responsive e-commerce experience similar to Amazon with real-time features.",
       solution:
-        "Built a cloud-native e-commerce platform with a React front-end and microservices back-end, deployed on AWS.",
-      role: "Full-Stack Developer",
+        "I built a full-stack Amazon clone using React.js , Firebase , Node.js , and Express.js — featuring product browsing, search, cart functionality, and secure authentication.",
+      role: "Full Stack Developer | Firebase & API Integration | Responsive UI",
     },
   },
 ];
