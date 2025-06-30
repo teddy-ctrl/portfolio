@@ -1,0 +1,69 @@
+/*
+ * ===================================================================
+ * A Professional, Polished Theme Toggle Button
+ * ===================================================================
+ */
+.themeToggle {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  width: 56px; /* Wider for a better feel */
+  height: 32px;
+  border-radius: 50px; /* Pill shape */
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.themeToggle:hover {
+  border-color: var(--color-blue);
+}
+
+/* This is the circle that slides back and forth */
+.iconWrapper {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-text-secondary);
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.4s ease;
+}
+
+.themeToggle:hover .iconWrapper {
+  background-color: var(--color-blue);
+}
+
+/* The icons inside the sliding circle */
+.icon {
+  position: absolute;
+  color: var(--color-background);
+  font-size: 1rem;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* --- The Magic for the Switch Animation --- */
+
+/* DARK MODE (default state) */
+/* Moon is visible, Sun is hidden above */
+.moon { transform: translateY(0) rotate(0deg); }
+.sun { transform: translateY(-150%) rotate(-90deg); }
+
+/* LIGHT MODE state */
+/* The sliding circle moves to the right */
+[data-theme='light'] .iconWrapper {
+  transform: translateX(23px);
+  background-color: var(--color-blue);
+}
+
+/* Sun moves into view, Moon moves out below */
+[data-theme='light'] .moon { transform: translateY(150%) rotate(90deg); }
+[data-theme='light'] .sun { transform: translateY(0) rotate(0deg); }

@@ -1,0 +1,365 @@
+/* --- Featured Project Card Styles --- */
+.featuredCard {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+     max-width: 1200px;
+}
+
+.featuredCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--color-shadow);
+    border-color: var(--color-border-hover);
+        background-color: var(--color-background-secondary);
+
+}
+
+.featuredImageContainer {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+}
+
+.featuredImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.featuredContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.featuredTag {
+    background: var(--color-blue);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.featuredTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.featuredDescription {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.keyFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.keyFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.techTag {
+    background-color: var(--color-background);
+    color: var(--color-text-secondary);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* --- Secondary Projects Grid Styles --- */
+.projectsGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.projectCard {
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px var(--color-shadow);
+  cursor: pointer;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--color-shadow);
+  border-color: var(--color-border-hover);
+    background-color: var(--color-background-secondary);
+
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+
+/* --- Other Noteworthy Projects Section Styles --- */
+.noteworthyContainer {
+    margin-top: 6rem;
+}
+
+.noteworthyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.noteworthyTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.viewMoreButton {
+    padding: 10px 20px;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 980px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.viewMoreButton:hover {
+    background-color: var(--color-blue);
+    color: #fff;
+    border-color: var(--color-blue);
+}
+
+.noteworthyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.noteworthyCard {
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.noteworthyCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-border-hover);
+    box-shadow: 0 15px 30px var(--color-shadow);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.folderIcon {
+    font-size: 2.5rem;
+    color: var(--color-blue);
+}
+
+.externalLinkIcon {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+}
+
+.noteworthyCard:hover .externalLinkIcon {
+    color: var(--color-blue);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.cardDescription {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.cardTechList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+}
+
+.cardTechTag {
+    color: var(--color-text-secondary);
+}
+
+/* --- Keep all your other styles for .featuredCard, .projectsGrid, etc. --- */
+
+
+/* 
+ * ===================================================================
+ * NEW: CSS to make the last project fill the empty space
+ * ===================================================================
+ */
+
+/* 
+ * This selector is a bit complex, but very powerful.
+ * It targets the `.projectCard` that is the a) last child in the grid AND b) in an odd position (1st, 3rd, 5th, etc.).
+ * This scenario only happens when you have an odd number of items in a two-column grid.
+*/
+.projectCard:last-child:nth-child(odd) {
+  /* This tells the grid item to span across two columns instead of one. */
+  grid-column: 1 / -1;
+
+  /* We need to adjust the layout to be horizontal (side-by-side) for the wide card */
+  display: flex;
+  flex-direction: row;
+  aspect-ratio: auto; /* Remove the fixed aspect ratio for this card */
+}
+
+/* 
+  When the card is wide, we want the image to take up a portion of the left side,
+  not the entire background.
+*/
+.projectCard:last-child:nth-child(odd) .imageContainer {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+/* We also need a new container for the text content in this special wide card */
+.projectCard:last-child:nth-child(odd) .cardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* 
+  The overlay is not needed for the wide card layout, so we hide it.
+  We also need to make the title and description visible.
+*/
+.projectCard:last-child:nth-child(odd) .overlay {
+  display: none;
+}
+/* Projects.module.css */
+
+/* --- Keep all your existing styles for .featuredCard, .projectsGrid, etc. --- */
+
+
+/* 
+ * ===================================================================
+ * NEW: Styles for the links on the cards
+ * ===================================================================
+ */
+.cardLinks {
+  margin-top: auto; /* Pushes the links to the bottom of the card content */
+  padding-top: 1rem; /* Adds space above the links */
+  display: flex;
+  justify-content: flex-end; /* Aligns links to the right */
+  gap: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.cardLinks a {
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.cardLinks a:hover {
+  color: var(--color-blue);
+  transform: translateY(-2px);
+}
+
+/* Specific adjustment for the regular project cards */
+.projectCard .cardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    flex-grow: 1; /* Ensures content area fills the available space */
+}
+
+.projectCard .projectDescription {
+    flex-grow: 1; /* Ensures the description takes up space, pushing links down */
+}
+/* --- Responsive Styles --- */
+@media (max-width: 992px) {
+    .featuredCard {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,207 @@
+.contactWrapper {
+  display: grid;
+  /* Adjusting the column ratio for better visual balance */
+  grid-template-columns: 1fr 1.4fr; 
+  gap: 3rem; /* Reduced gap for a more connected feel */
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 3rem; /* Consistent padding around the content */
+
+}
+
+/* --- Column 1: Info & Direct Links --- */
+.infoSide {
+  /* No top padding needed, alignment is now handled by the wrapper's padding */
+  display: flex;
+  flex-direction: column; /* Allows for vertical alignment of social links */
+}
+
+.infoSide h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary, #e4e6eb);
+}
+
+.contactIntro { /* Renamed from .infoSide p for clarity */
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary, #b0b3b8);
+  margin-bottom: 2rem;
+}
+
+.directContact {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Tighter gap for a cleaner list */
+}
+
+.contactItem {
+  display: flex; /* Changed to flex for better consistency */
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--color-text-secondary, #b0b3b8);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactItem:hover {
+  background-color: var(--color-background-secondary, #2a2b2f);
+  color: var(--color-text-primary, #e4e6eb);
+  transform: translateX(5px); /* Adds a subtle interactive nudge */
+}
+
+.contactIcon {
+  font-size: 1.4rem;
+  color: var(--color-blue, #007bff);
+  flex-shrink: 0;
+}
+
+
+
+/* --- Column 2: The Contact Form --- */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Slightly adjusted gap */
+}
+
+.inputGroup {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.inputField,
+.textareaField {
+  background-color: transparent;
+  border: 1px solid var(--color-border, #333);
+  color: var(--color-text-primary, #e4e6eb);
+  padding: 1rem; /* Standardized padding */
+  border-radius: 8px; /* Slightly smaller radius for a sharper look */
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.inputField:hover,
+.textareaField:hover{
+  background-color: var(--color-background-secondary, #2a2b2f);
+}
+.inputField::placeholder,
+.textareaField::placeholder {
+  color: var(--color-text-secondary, #b0b3b8);
+  opacity: 0.7;
+}
+
+.inputField:focus,
+.textareaField:focus {
+  outline: none;
+  border-color: var(--color-blue, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.textareaField {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.submitButton {
+  align-self: flex-start; /* Crucial for alignment */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-blue, #007bff);
+  color: #fff;
+  padding: 0.9rem 1.75rem;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.15);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--color-blue-hover, #0056b3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 122, 255, 0.25);
+}
+
+.sendIcon {
+  transition: transform 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) .sendIcon {
+  transform: translateX(4px) rotate(-20deg);
+}
+
+.submitButton:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* --- Status Messages --- */
+.statusMessage {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.statusMessage p { margin: 0; }
+.statusIcon { font-size: 1.3rem; }
+
+/* Combined class selector for correctness */
+.statusMessage.success {
+  background-color: rgba(45, 211, 111, 0.1);
+  color: #2dd36f;
+  border: 1px solid rgba(45, 211, 111, 0.2);
+}
+
+.statusMessage.error {
+  background-color: rgba(235, 68, 90, 0.1);
+  color: #eb445a;
+  border: 1px solid rgba(235, 68, 90, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+
+
+
+  .socialLinks {
+    margin-top: 1.5rem;
+    justify-content: flex-start; /* Align to the start */
+  }
+}
+
+@media (max-width: 768px) {
+  .contactWrapper {
+    padding: 1.5rem;
+  }
+  .inputGroup {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}

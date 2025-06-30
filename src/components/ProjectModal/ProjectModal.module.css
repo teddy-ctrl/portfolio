@@ -1,0 +1,154 @@
+/*
+ * ===================================================================
+ * FINAL, THEME-AWARE STYLES FOR THE PROJECT MODAL
+ * ===================================================================
+ */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  /* Use the new variable for the backdrop color */
+  background-color: var(--color-backdrop-bg);
+  z-index: 9999; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  /* Use theme variables for background, border, and shadow */
+  background-color: var(--color-modal-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 30px 60px var(--color-shadow);
+  
+  border-radius: 24px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleUp 0.3s ease;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  /* Use theme variable for the button background */
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: var(--color-blue);
+  color: #fff; /* White works well on blue for both themes */
+  transform: rotate(90deg);
+}
+
+.modalContent {
+  padding: 2rem;
+}
+
+.modalImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain; /* Changed to 'cover' for better aesthetics */
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  height: 300px;
+}
+
+.modalTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+  color: var(--color-text-primary); /* Inherits, but good to be explicit */
+}
+
+.caseStudySection {
+  margin-bottom: 1.4rem;
+}
+
+.caseStudySection h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.caseStudySection p {
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techTag {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.projectLinks a {
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.projectLinks a:hover {
+  color: var(--color-blue);
+}
+
+/* Keyframe animations are theme-agnostic */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .modalContent { padding: 1.5rem; }
+    .modalTitle { font-size: 1.8rem; }
+}
