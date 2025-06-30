@@ -136,9 +136,9 @@ export const otherProjects = [
   {
     id: 8,
     image: "/project8.png", // Use a new image
-    title: "GraphQL API for Mobile App",
+    title: "Amazon Clone",
     description:
-      "A flexible GraphQL API to serve data to both iOS and Android clients.",
+      "Fully responsive e-Commerce platform",
     technologies: ["Node.js", "Apollo Server", "GraphQL", "Prisma"],
     repoLink: "https://github.com/teddy-ctrl/amazon-project.git",
     liveLink: "https://amazon-project-nine-jade.vercel.app",
