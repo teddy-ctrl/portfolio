@@ -4,7 +4,7 @@
 export const featuredProject = {
   id: "featured",
   image: "/project1.png",
-  title: "Enterprise SaaS Platform",
+  title: "Evangadi Forum",
   description: "A multi-tenant SaaS application for project management.",
   technologies: [
     "React",
@@ -23,10 +23,10 @@ export const featuredProject = {
   liveLink: "https://evangadi-forum-three.vercel.app/",
   caseStudy: {
     problem:
-      "Businesses needed a centralized, secure platform to manage complex projects and user permissions.",
+      "Users needed a Q&A forum to ask, answer, and interact with content.",
     solution:
-      "I architected and built a cloud-native SaaS platform with a React SPA front-end and separate microservices for the back-end, all containerized with Docker and deployed on AWS.",
-    role: "Lead Full-Stack Developer.",
+      "I built Evengadi Forum using React.js , Node.js , Express.js , and PostgreSQL/MySQL for smooth interactions like upvoting, editing, and real-time updates.",
+    role: "Full Stack Developer | API Integration | PostgreSQL/MySQL",
   },
 };
 
