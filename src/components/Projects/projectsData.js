@@ -5,7 +5,7 @@ export const featuredProject = {
   id: "featured",
   image: "/project1.png",
   title: "Evangadi Forum",
-  description: "A multi-tenant SaaS application for project management.",
+  description: "Evangadi Q&A Forum",
   technologies: [
     "React",
     "TypeScript",
