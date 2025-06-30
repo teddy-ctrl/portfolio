@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
 import useOnScreen from '../../hooks/useOnScreen';
-import { FiSend, FiMail, FiCheckCircle, FiAlertCircle, FiMapPin } from 'react-icons/fi';
+import { FiSend, FiMail, FiCheckCircle, FiAlertCircle, FiSmartphone } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
@@ -60,13 +60,13 @@ const Contact = () => {
                         <span>tedu21@gmail.com</span>
                     </a>
                     <a 
-                      href="https://www.google.com/maps/search/?api=1&query=San+Francisco,CA"
+                      href="https://www.google.com/maps/place/Addis+Ababa/data=!4m2!3m1!1s0x164b85cef5ab402d:0x8467b6b037a24d49?sa=X&ved=1t:242&ictx=111"
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className={styles.contactItem}
                     >
-                        <FiMapPin className={styles.contactIcon} />
-                        <span>San Francisco, CA, USA</span> 
+                        <FiSmartphone className={styles.contactIcon} />
+                        <span>+251-911-009-856</span> 
                     </a>
                 </div>
                 

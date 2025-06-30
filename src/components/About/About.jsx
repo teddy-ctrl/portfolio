@@ -96,7 +96,7 @@ const About = () => {
             </p>
             <a
               href={resumePDF}
-              download="[YourName]-FullStack-Resume.pdf"
+              download="[Tewodros]-FullStack-Resume.pdf"
               className={styles.resumeButton}
             >
               <FiDownload /> Download My Resume
