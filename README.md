@@ -236,4 +236,4 @@ Results-driven Full-Stack Developer with [X] years of experience designing, deve
 3.  **Tailor It for the Job:** Read the job description carefully. If they mention "GraphQL" and "AWS," make sure those keywords are prominent in your resume. You can slightly reorder your skills or bullet points to match.
 4.  **Keep it to One Page:** For most developers, a single-page resume is ideal. Be concise.
 5.  **Proofread:** Typos and grammatical errors are the easiest way to get your resume discarded. Use a tool like Grammarly and have a friend read it over.
-6.  **Save as PDF:** Always send your resume as a PDF, named something professional like `YourName_Resume.pdf`.
+6.  **Save as PDF:** Always send your resume as a PDF, named something professional like `myresum.pdf`.
